@@ -82,15 +82,8 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        // child: RaisedButton(
-        //   onPressed: () {
-        //     print('Clicked!');
-        //   },
-        //   child: Text('Click me'),
-        //   color: Colors.lightBlue,
-        // ),
-
-        child: Column(
+        child: Container (
+          child: Column(
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -107,6 +100,12 @@ class _HomePageState extends State<HomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RaisedButton(onPressed: () {
+              print('Button Clicked!');
+            },
+              child: Text('Click me'),
+              color: Colors.lightBlue,
+            ),
             Text(
               'You have pushed the button this many times:',
               style: TextStyle(
@@ -125,6 +124,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
+        ),
       ),
 
       bottomNavigationBar: BottomAppBar(
@@ -137,7 +137,6 @@ class _HomePageState extends State<HomePage> {
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-
     );
   }
 }
