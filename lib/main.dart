@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 void main() {
   runApp(FlutterTemplate());
@@ -63,6 +64,12 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void _getData() async {
+    print('getData');
+    Response response = await get('https://ottawastem.com');
+    print(response.body);
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -102,6 +109,7 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             RaisedButton(onPressed: () {
               print('Button Clicked!');
+              _getData();
             },
               child: Text('Click me'),
               color: Colors.lightBlue,
