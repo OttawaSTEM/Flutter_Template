@@ -8,6 +8,9 @@
             "name": "Flutter_Template",
             "request": "launch",
             "type": "dart",
+            "args": [
+                "--enable-software-rendering"
+            ]
         }
     ]
 }
